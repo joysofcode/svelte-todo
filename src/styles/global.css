@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --sans-serif: 'Inter', sans-serif;
+
+  --color-bg: hsl(220, 20%, 14%);
+  --color-text: hsl(0, 0%, 2%);
+  --color-title: hsl(357, 49%, 48%);
+  --color-highlight: hsl(0, 33%, 64%);
+  --color-gray-28: hsl(0, 0%, 28%);
+  --color-gray-58: hsl(0, 0%, 58%);
+  --color-gray-90: hsl(0, 0%, 90%);
+
+  --font-24: 1.5rem;
+  --font-32: 2rem;
+  --font-80: 5rem;
+
+  --spacing-4: 0.25rem;
+  --spacing-8: 0.5rem;
+  --spacing-16: 1rem;
+
+  --shadow-1: hsl(0, 0%, 0%, 0.1);
+
+  --radius-base: 4px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  font-family: var(--sans-serif);
+  font-weight: 300;
+  line-height: 1.4;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+label,
+input,
+button {
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+:focus,
+.toggle:focus + label,
+.toggle-all:focus + label {
+  box-shadow: 0 0 2px 2px var(--color-highlight);
+  outline: 0;
+}
