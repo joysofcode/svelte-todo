@@ -94,17 +94,19 @@
   <section class="todos">
     <AddTodo {addTodo} {toggleCompleted} {todosAmount} />
 
-    <ul class="todo-list">
-      {#each filteredTodos as todo (todo.id)}
-        <Todo {todo} {completeTodo} {removeTodo} {editTodo} {duration} />
-      {/each}
-    </ul>
+    {#if todosAmount}
+      <ul class="todo-list">
+        {#each filteredTodos as todo (todo.id)}
+          <Todo {todo} {completeTodo} {removeTodo} {editTodo} {duration} />
+        {/each}
+      </ul>
 
-    <div class="actions">
-      <TodosLeft {incompleteTodos} />
-      <FilterTodos {selectedFilter} {setFilter} />
-      <ClearTodos {clearCompleted} {completedTodos} />
-    </div>
+      <div class="actions">
+        <TodosLeft {incompleteTodos} />
+        <FilterTodos {selectedFilter} {setFilter} />
+        <ClearTodos {clearCompleted} {completedTodos} />
+      </div>
+    {/if}
   </section>
 </main>
 
