@@ -1,8 +1,8 @@
 # Svelte Todo List App
 
-🔗 Project files for the [Svelte Todo List App](https://joyofcode.xyz/svelte-todo-list-app)
+🔗 Project files for [Svelte Todo App](https://joyofcode.xyz/svelte-todo-app)
 
-## ⚙️ Setup
+## Setup
 
 🧑‍🤝‍🧑 Clone the project
 
