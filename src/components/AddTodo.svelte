@@ -1,11 +1,11 @@
 <script lang="ts">
   type AddTodoType = (todo: string) => void
   type ToggleCompletedType = (event: MouseEvent) => void
-  type AmountType = number
+  type TodosAmountType = number
 
   export let addTodo: AddTodoType
   export let toggleCompleted: ToggleCompletedType
-  export let amount: AmountType
+  export let todosAmount: TodosAmountType
 
   let todo = ''
 
@@ -16,7 +16,7 @@
 </script>
 
 <form on:submit|preventDefault={handleSubmit}>
-  {#if amount > 0}
+  {#if todosAmount > 0}
     <input
       on:click={toggleCompleted}
       type="checkbox"

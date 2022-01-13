@@ -10,13 +10,13 @@
   import FilterTodos from './FilterTodos.svelte'
   import ClearTodos from './ClearTodos.svelte'
 
+  // state
   let todos = useStorage<ITodo[]>('todos', [])
-
   let selectedFilter: FiltersType = 'all'
   let filtering = false
 
   // computed
-  $: amountTodos = $todos.length
+  $: todosAmount = $todos.length
   $: incompleteTodos = $todos.filter((todo) => !todo.completed).length
   $: filteredTodos = filterTodos($todos, selectedFilter)
   $: completedTodos = $todos.filter((todo) => todo.completed).length
@@ -92,7 +92,7 @@
   <h1 class="title">todos</h1>
 
   <section class="todos">
-    <AddTodo {addTodo} {toggleCompleted} amount={amountTodos} />
+    <AddTodo {addTodo} {toggleCompleted} {todosAmount} />
 
     <ul class="todo-list">
       {#each filteredTodos as todo (todo.id)}
