@@ -34,7 +34,6 @@
       completed: false,
     }
     $todos = [...$todos, newTodo]
-    todo = ''
   }
 
   function toggleCompleted(event: MouseEvent): void {
