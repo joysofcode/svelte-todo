@@ -15,11 +15,11 @@
 
   let editing = false
 
-  function toggleEdit() {
+  function toggleEdit(): void {
     editing = true
   }
 
-  function handleEdit(event: KeyboardEvent, id: string) {
+  function handleEdit(event: KeyboardEvent, id: string): void {
     let pressedKey = event.key
     let targetElement = event.target as HTMLInputElement
     let newTodo = targetElement.value
@@ -35,7 +35,7 @@
     }
   }
 
-  function handleBlur(event: FocusEvent, id: string) {
+  function handleBlur(event: FocusEvent, id: string): void {
     let targetElement = event.target as HTMLInputElement
     let newTodo = targetElement.value
 
