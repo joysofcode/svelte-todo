@@ -60,7 +60,7 @@
 
   function editTodo(id: string, newTodo: string): void {
     let currentTodo = $todos.findIndex((todo) => todo.id === id)
-    todos[currentTodo].text = newTodo
+    $todos[currentTodo].text = newTodo
   }
 
   async function setFilter(newFilter: FiltersType): Promise<void> {

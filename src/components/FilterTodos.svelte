@@ -25,7 +25,6 @@
   .filters {
     display: flex;
     gap: var(--spacing-4);
-    list-style: none;
   }
 
   .filter {
