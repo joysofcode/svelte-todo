@@ -28,6 +28,7 @@
     </label>
   {/if}
 
+  <!-- svelte-ignore a11y-autofocus -->
   <input
     bind:value={todo}
     id="new-todo"

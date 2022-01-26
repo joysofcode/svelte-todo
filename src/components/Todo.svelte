@@ -72,6 +72,7 @@
   </div>
 
   {#if editing}
+    <!-- svelte-ignore a11y-autofocus -->
     <input
       on:keydown={(event) => handleEdit(event, todo.id)}
       on:blur={(event) => handleBlur(event, todo.id)}
